@@ -5,6 +5,10 @@ body {
   text-align: center;
 }
 
-#myCanvas {
+#networkCanvas {
+  background: #313131;
+}
+
+#carCanvas {
   background: #d3d3d3;
 }
