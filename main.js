@@ -11,20 +11,52 @@ const road = new Road(carCanvas.width / 2, carCanvas.width * 0.9);
 // Lane 0 1 2 3 ... (getLaneCenter)
 // const car = new Car(road.getLaneCenter(1), 100, 30, 50, "KEYS");
 
-const N = 1;
+const mutations = 0.08; // <- Var
+const N = 1500; // <- Var
 const cars = generateCars(N);
 
 const traffic = [
   new Car(road.getLaneCenter(1), -100, 30, 50, "DUMMY", 2),
-  new Car(road.getLaneCenter(0), -300, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(0), -200, 30, 50, "DUMMY", 2),
   new Car(road.getLaneCenter(2), -300, 30, 50, "DUMMY", 2),
-  new Car(road.getLaneCenter(0), -500, 30, 50, "DUMMY", 2),
-  new Car(road.getLaneCenter(1), -500, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(0), -300, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(1), -400, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(2), -500, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(1), -600, 30, 50, "DUMMY", 2),
+  //
   new Car(road.getLaneCenter(1), -700, 30, 50, "DUMMY", 2),
-  new Car(road.getLaneCenter(2), -700, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(0), -800, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(2), -800, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(0), -900, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(1), -900, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(2), -1000, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(1), -1100, 30, 50, "DUMMY", 2),
+  //
+  new Car(road.getLaneCenter(1), -1200, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(0), -1300, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(2), -1300, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(0), -1400, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(1), -1400, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(2), -1500, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(1), -1600, 30, 50, "DUMMY", 2),
+  //
+  new Car(road.getLaneCenter(1), -1700, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(0), -1800, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(2), -1900, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(0), -1900, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(1), -2000, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(2), -2100, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(1), -2200, 30, 50, "DUMMY", 2),
+  //
+  new Car(road.getLaneCenter(1), -2300, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(2), -2400, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(0), -2400, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(2), -2500, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(1), -2500, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(0), -2600, 30, 50, "DUMMY", 2),
+  new Car(road.getLaneCenter(1), -2700, 30, 50, "DUMMY", 2),
 ];
 
-const mutations = 0.3;
 let bestCar = cars[0];
 
 if (localStorage.getItem("bestBrain")) {
